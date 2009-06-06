@@ -1,0 +1,8 @@
+content ChrominFrame content/
+skin ChrominFrame classic/1.0 skin/
+
+overlay chrome://browser/content/browser.xul chrome://ChrominFrame/content/overlay.xul
+
+style chrome://browser/content/browser.xul chrome://ChrominFrame/content/overlay.css
+
+style chrome://browser/content/browser.xul chrome://ChrominFrame/skin/style.css

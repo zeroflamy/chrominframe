@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE bindings [
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+%browserDTD;
+<!ENTITY % tabBrowserDTD SYSTEM "chrome://browser/locale/tabbrowser.dtd" >
+%tabBrowserDTD;
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd" >
+%brandDTD;
+<!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+%globalDTD;
+]>
+
+<bindings id="ChrominFramebindings"
+					xmlns="http://www.mozilla.org/xbl"
+					xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+					xmlns:xbl="http://www.mozilla.org/xbl">
+	
+	<binding id="ChrominFrame">
+		<content>
+			<xul:vbox flex="1">
+				<xul:hbox>
+					<xul:resizer dir="top" class="frame-resizer" flex="1"/>
+				</xul:hbox>
+				<xul:hbox id="chrome-title-box" class="frame-title-box">
+					<xul:resizer dir="topleft" class="frame-resizer"/>
+					<xul:vbox flex="1" ondblclick="if(event.button==0){BrowserOpenTab()};">
+						<xul:titlebar class="frame-titlebar" flex="1"
+								ondblclick="if(event.button==0){gChrominFrame.Maximize()};">
+							<xul:label crop="end" flex="1" id="chromeTitle" class="title-text"/>
+						</xul:titlebar>
+						<xul:titlebar flex="1" class="tab-dbclick-box">
+						</xul:titlebar>
+						<xul:hbox id="private-browsing-icon"/>
+					</xul:vbox>
+					<xul:hbox id="chrome-button-box">
+						<!--xul:label class="titlebar-label" value="&brandShortName;"/-->
+						<xul:toolbarbutton class="frame-button min-button" oncommand="window.minimize();"/>
+						<xul:toolbarbutton class="frame-button max-button" oncommand="gChrominFrame.Maximize();"
+						id="topper_max_button"/>
+						<xul:toolbarbutton class="frame-button close-button" oncommand="BrowserTryToCloseWindow();"/>
+					</xul:hbox>
+					<xul:resizer dir="topright" class="frame-resizer"/>
+				</xul:hbox>
+				<xul:hbox flex="1" id="chrome-body">
+					<xul:resizer class="frame-resizer" dir="left"/>
+					<xul:vbox xbl:inherits="orient" flex="1" id="chrome-content">
+						<children/>
+					</xul:vbox>
+					<xul:resizer class="frame-resizer" dir="right"/>
+				</xul:hbox>
+				<xul:hbox>
+					<xul:resizer dir="bottomleft" class="frame-resizer"/>
+					<xul:resizer dir="bottom" class="frame-resizer" flex="1"/>
+					<xul:resizer dir="bottomright" class="frame-resizer"/>
+				</xul:hbox>
+			</xul:vbox>
+		</content>
+	</binding>
+
+</bindings>

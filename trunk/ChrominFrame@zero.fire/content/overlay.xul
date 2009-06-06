@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<overlay id="ChrominFrame-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <window id="main-window" hidechrome="true" active="true">
+    <script src="chrome://ChrominFrame/content/overlay.js"/>
+  </window>
+</overlay>

@@ -1,0 +1,715 @@
+/* titlebar */
+.frame-title-box {
+	height: 40px;
+	background-color: #9CC1EF; /* #9CC1EF #4E95EC */
+}
+window[active="true"] .frame-title-box { background-color: #4C91E5; }
+
+.frame-titlebar {
+	margin-right:100px;
+}
+/* title text*/
+
+#chromeTitle.title-text {
+	color: #fff;
+	margin: 0 0 0 16px;
+	font: bold 12px/18px Helvetica, Arial, sans-serif;
+	opacity: 0.6;
+}
+#chromeTitle.frame-title-box:hover .title-text { opacity: 0.6; }
+
+/* box for double click to add new tab */
+.tab-dbclick-box {
+	height: 22px;
+}
+
+/* ui buttons */
+#chrome-button-box {
+	position: fixed;
+	top: 1px;
+	right: 4px;
+}
+
+#chrome-button-box .frame-button {
+	-moz-appearance: none;
+	-moz-box-align: stretch;
+	-moz-box-pack: start;
+	background: none transparent;
+	min-width: 25px;
+	min-height: 18px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	z-index: 500;
+}
+
+#chrome-button-box .min-button { width: 26px; list-style-image: url(btn-min.png); }
+#chrome-button-box .min-button:hover { list-style-image: url(btn-min-h.png); }
+#chrome-button-box .min-button:active { list-style-image: url(btn-min-a.png); }
+
+#chrome-button-box .max-button { width: 25px; list-style-image: url(btn-max.png); }
+#chrome-button-box .max-button:hover { list-style-image: url(btn-max-h.png); }
+#chrome-button-box .max-button:active { list-style-image: url(btn-max-a.png); }
+
+#chrome-button-box .close-button { width: 43px; list-style-image: url(btn-close.png); }
+#chrome-button-box .close-button:hover { list-style-image: url(btn-close-h.png); }
+#chrome-button-box .close-button:active { list-style-image: url(btn-close-a.png); }
+
+/* resizers */
+
+window#main-window { border: none !important; }
+
+resizer.frame-resizer {
+	margin:0;
+	padding:0;
+	opacity: 1 !important;
+	-moz-appearance:none !important;
+	background-image: none !important;
+	background-color: #9CC1EF !important;
+	border-color: #666 !important;}
+window[active="true"] resizer.frame-resizer {
+	background-color: #4c86Cc !important;
+	border-color: #555 !important; }
+
+window resizer.frame-resizer[dir="top"] {
+	height: 2px;
+	cursor: n-resize;
+	background-color: #87B8F3 !important;
+	border-top: 1px solid #555;
+}
+window resizer.frame-resizer[dir="left"] {
+	width: 3px;
+	cursor: w-resize;
+	border-left: 1px solid #555;
+}
+window resizer.frame-resizer[dir="right"] {
+	width: 3px;
+	cursor: e-resize;
+	border-right: 1px solid #555;
+}
+window resizer.frame-resizer[dir="bottom"] {
+	height: 4px;
+	cursor: s-resize;
+	border-top: 1px solid #369;
+	border-bottom: 1px solid #555;
+}
+window resizer.frame-resizer[dir="topleft"] {
+	width: 3px;
+	cursor: nw-resize;
+	border-left: 1px solid #555;
+	border-top: 1px solid #555;
+	margin-top: -2px;
+}
+window resizer.frame-resizer[dir="topright"] {
+	width: 3px;
+	cursor: ne-resize;
+	border-right: 1px solid #555;
+	border-top: 1px solid #555;
+	margin-top: -2px;
+}
+window resizer.frame-resizer[dir="bottomleft"] {
+	width: 3px;
+	height: 3px;
+	cursor: sw-resize;
+	border-left: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+window resizer.frame-resizer[dir="bottomright"] {
+	width: 3px;
+	height: 3px;
+	cursor: se-resize;
+	border-right: 1px solid #555;
+	border-bottom:1px solid #555;
+}
+
+/* borders */
+
+#chrome-body { background-color: #9CC1EF; /* #9CC1EF #4E95EC */}
+window[active="true"] #chrome-body { background-color: #4C91E5; }
+
+#chrome-content {
+	border-left: 1px solid #69c;
+	border-right: 1px solid #69c;
+}
+window[active="true"] #chrome-content {
+	border-left: 1px solid #369;
+	border-right: 1px solid #369;
+}
+#chrome-content, #navigator-toolbox,
+#toolbar-menubar, #main-menubar,
+#toolbar-menubar[collapsed] + #nav-bar {
+	border-top: 0px !important;
+	-moz-border-radius: 2px 2px 0px 0px !important;
+}
+#navigator-toolbox,#navigator-toolbox toolbar {-moz-appearance: none ;}
+
+/* tabs */
+
+.tabbrowser-tab .tab-text, 
+.tabbrowser-tab .tab-text-stack {
+	color: black !important;
+	padding-top: 2px !important;
+}
+
+.tab-text {
+	border: none !important;
+}
+
+.tabbrowser-tabs:not([MAC]):not([classic="v3"]):not([classic="v2"]) .tabbrowser-tab .showhover {
+	-moz-margin-end: -3px !important;
+}
+
+.tabbrowser-tab[tabx="showhover"][tabxleft="on"][showbutton="on"] .showhover,
+.tabbrowser-tabs:not([MAC]):not([classic="v3"]):not([classic="v2"]) .tabbrowser-tab[tabxleft="on"] .showhover {
+	-moz-margin-end: 0px !important;
+	-moz-margin-start: -37px !important;
+}
+
+.tabbrowser-tab[tabx="showhover"][tabxleft="on"][showbutton="on"] .tab-icon,
+.tabbrowser-tab[tabx="current_hover"][showbutton="on"]:not([selected="true"])[tabxleft="on"] .tab-icon {
+	-moz-margin-start: 12px !important;
+}
+
+.tabbrowser-tab .tab-icon-image,
+.tabbrowser-tab[busy] .tab-icon-image { width:16px !important; height:16px !important; }
+
+.tabbrowser-tab[busy] .tab-icon-image {
+	list-style-image: url("loading.png");
+	-moz-image-region: rect(0px 16px 16px 0px);
+}
+
+
+/* tabbox */
+
+.tabbrowser-strip {
+	position:fixed !important;
+	top:16px !important;
+	left:4px !important;
+	border: 0 !important;
+	padding: 0 0px 0 0 !important;
+	margin: 0 32px 0 0 !important;
+	width: auto !important;
+	height: 26px !important;
+	z-index:0 !important;
+	overflow: hidden !important;
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
+.tabs-bottom {display: none !important;}
+
+.tabbrowser-tabs {
+	background-color: transparent !important;
+	background-image: none !important;
+	height: 26px !important;
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+tab {
+	-moz-user-select:-moz-none!important;
+	z-index: 0!important;
+	-moz-border-radius-bottomleft: 0px!important;
+}
+
+.tabs-frame box {
+	padding-top: 0px !important;
+}
+
+/* tab indicator */
+
+.tab-drop-indicator-bar {
+	position: fixed!important;
+	top: 36px !important;
+	left: -1px !important;
+	width: 100%!important;
+	z-index: 1;
+}
+
+.tab-drop-indicator {
+	background-image: url(tab-drop-indicator.png) !important;
+}
+
+/* tabs */
+
+.tabbrowser-tab {
+	-moz-appearance: none !important;
+	border:0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	min-width: 150px;
+	height: 26px !important;
+	min-height: 26px !important;
+	max-height: 26px !important;
+	-moz-border-radius: 0 !important;
+}
+
+.tabbrowser-tab,
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab:hover,
+.tabbrowser-tab:not([selected="true"]):hover {
+	margin-left: 15px !important;
+	margin-right: -15px !important;
+	background: transparent none !important;
+}
+
+/* first tab */
+.tabbrowser-tabs[overflow] .tabbrowser-tab[first-tab="true"] {
+	margin-left: 0 !important;
+	padding-left: 15px !important;
+}
+/* last tab */
+.tabbrowser-tab[last-tab="true"],
+.tabbrowser-tab[last-tab="true"]:hover {
+	margin-right: 0px !important;
+}
+
+/* tabs */
+
+.tab-left-img, .tab-right-img{
+	display: -moz-box;
+	width: 15px;
+	height: 26px;
+}
+
+/* tab images */
+.tab-center-img {
+	height: 26px;
+	min-height:26px;
+	list-style-image: url(tab-image-middle.png);
+	background: transparent url(tab-image-middle.png);
+}
+.tab-left-img {
+	margin-left: -15px;
+	list-style-image: url(tab-image-left.png);
+	background: transparent url(tab-image-left.png);
+}
+.tab-right-img {
+	list-style-image: url(tab-image-right.png);
+	background: transparent url(tab-image-right.png);
+}
+
+/* selected */
+.tabbrowser-tab[selected="true"] .tab-center-img {
+	list-style-image: url(selected-tab-image-middle.png);
+	background: transparent url(selected-tab-image-middle.png);
+}
+.tabbrowser-tab[selected="true"] .tab-left-img {
+	list-style-image: url(selected-tab-image-left.png);
+	background: transparent url(selected-tab-image-left.png);
+}
+.tabbrowser-tab[selected="true"] .tab-right-img {
+	list-style-image: url(selected-tab-image-right.png);
+	background: transparent url(selected-tab-image-right.png);
+}
+
+/* after select */
+.tabbrowser-tab[afterselected="true"] .tab-left-img {
+	list-style-image: url(selected-tab-image-right-tab-image-left.png);
+	background: transparent url(selected-tab-image-right-tab-image-left.png);
+}
+
+/* left cover right */
+
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]) .tab-left-img {
+	list-style-image: url(tab-image-right--tab-image-left.png);
+	background: transparent url(tab-image-right-tab-image-left.png);
+}
+
+/* hover */
+.tabbrowser-tab:not([selected="true"]):hover .tab-center-img {
+	list-style-image: url(hover-tab-image-middle.png);
+	background: transparent url(hover-tab-image-middle.png);
+}
+.tabbrowser-tab:not([selected="true"]):hover .tab-left-img {
+	list-style-image: url(hover-tab-image-left.png);
+	background: transparent url(hover-tab-image-left.png);
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-right-img,
+.tabbrowser-tab[beforeselected]:hover .tab-right-img,
+.tabbrowser-tab[last-tab="true"]:not([selected="true"]):hover .tab-right-img {
+	list-style-image: url(hover-tab-image-right.png);
+	background: transparent url(hover-tab-image-right.png);
+}
+
+/* hover after select */
+.tabbrowser-tab[afterselected="true"]:hover .tab-left-img {
+	list-style-image: url(selected-tab-image-right-hover-tab-image-left.png);
+	background: transparent url(selected-tab-image-right-hover-tab-image-left.png);
+}
+
+/* hover left cover right */
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]):hover .tab-left-img {
+	list-style-image: url(tab-image-right-hover-tab-image-left.png);
+	background: transparent url(tab-image-right-hover-tab-image-left.png);
+}
+
+.tabbrowser-tab:hover +
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]) .tab-left-img {
+	list-style-image: url(hover-tab-image-right-tab-image-left.png);
+	background: transparent url(hover-tab-image-right-tab-image-left.png);
+}
+
+
+/* tab close button */
+
+.tab-close-button { 
+	height: 26px !important;
+	padding:0px !important;
+	margin: 0px !important;
+	-moz-border-radius:0 !important;
+	background-image: url(tab-image-middle.png) !important;
+}
+
+.tabbrowser-tab:hover .tab-close-button {
+	background-image: url(hover-tab-image-middle.png) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-close-button {
+	background-image: url(selected-tab-image-middle.png) !important;
+}
+
+/*New Tab Button on Tab Right*/
+.tabs-newtab-topbox {
+	-moz-box-align: end !important;
+	-moz-box-pack: end !important;
+	max-height:26px;
+	margin: 0 !important;
+	padding-top: 0px !important;
+}
+
+tabbrowser .tabbrowser-tabs[overflow] .tabs-newtab-button,
+tabbrowser .tabbrowser-tabs .tabs-newtab-button {
+	-moz-appearance: none !important;
+	-moz-box-orient: vertical !important;
+	min-width: 28px;
+	min-height:26px;
+	height: 26px !important;
+	border: none !important;
+	margin: 0 0 0 -2px !important;
+	padding:0 !important;
+	background: transparent url(newtab.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+tabbrowser .tabbrowser-tabs .tabs-newtab-button:hover {
+	background: transparent url(newtab-h.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+tabbrowser .tabbrowser-tabs .tabs-newtab-button:hover:active, .tabs-newtab-button[open="true"] {
+	background: transparent url(newtab-a.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+.tabs-newtab-button > .toolbarbutton-menu-dropmarker,
+.tabs-newtab-button > .toolbarbutton-text,
+.tabs-newtab-button > .toolbarbutton-icon { display: none !important; }
+
+/* all tab button */
+.tabs-alltabs-topbox {
+	-moz-box-align: end !important;
+	-moz-box-pack: end !important;
+	max-height:26px;
+	margin: 0 0 0 0px !important;
+	padding-top: 0px !important;
+}
+tabbrowser .tabbrowser-tabs .tabs-alltabs-button {
+	-moz-appearance: none;
+	-moz-box-orient: vertical !important;
+	width: 28px;
+	height:26px !important;
+	border: none !important;
+	margin: 0 0 0 -2px !important;
+	padding: 0 !important;
+	background: transparent url(alltabs.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+tabbrowser .tabbrowser-tabs .tabs-alltabs-button:hover {
+	background: transparent url(alltabs-hover.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+tabbrowser .tabbrowser-tabs .tabs-alltabs-button:hover:active, .tabs-alltabs-button[open="true"] {
+	background: transparent url(alltabs-active.png) no-repeat !important;
+	background-position: 0 5px !important;
+}
+
+.tabs-alltabs-box,
+.tabs-alltabs-button > .toolbarbutton-menu-dropmarker,
+.tabs-alltabs-button > .toolbarbutton-text,
+.tabs-alltabs-button > .toolbarbutton-icon { display: none !important; }
+
+.tabs-alltabs-box-animate {
+	margin: 0 !important;
+	width: 26px !important;
+	background: none !important;
+	opacity: 0.0; }
+
+/* tab scroll */
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-up,
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-down {
+	-moz-appearance: none;
+	border: 0 !important;
+	margin: 0 !important;
+	padding:0 !important;
+	max-height: 26px !important;
+	width: 16px;
+	background: transparent none;
+	-moz-border-radius: 0;
+	-moz-image-region: rect(0,16px,16px,0);
+}
+
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-up:hover,
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-down:hover,
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-up:hover:active,
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-down:hover:active {
+	background: transparent none;
+	-moz-image-region: rect(0,16px,16px,0);
+}
+
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-up {
+	list-style-image: url(menu-back.png);
+}
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-down{
+	list-style-image: url(menu-forward.png);
+}
+
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton { opacity: 0.8; }
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton:hover,
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton:hover:active { opacity: 1; }
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled],
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled]:hover{opacity: 0.3;}
+tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled].scrollbutton-up{visibility:collapse;}
+
+/* PersonalMenu */
+
+.cm-button > toolbarbutton {
+	width: 40px !important;
+}
+
+.cm-button > toolbarbutton[noarrow="true"] {
+	width: 33px !important;
+}
+
+.cm-button > toolbarbutton:hover {
+	background: transparent url(bgbutton-h.png) no-repeat !important;
+	background-position: center left !important;
+}
+
+.cm-button > toolbarbutton[noarrow="true"]:hover {
+	background-image: url(bgbutton-na-h.png) !important;
+}
+
+.cm-button > toolbarbutton:hover:active {
+	background-image: url(bgbutton-a.png) !important;
+}
+
+.cm-button > toolbarbutton[noarrow="true"]:hover:active {
+	background-image: url(bgbutton-na-a.png) !important;
+}
+
+#cm-menu {
+	list-style-image: url(cm.png) !important;
+	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
+}
+
+#history-button {
+	list-style-image: url(history.png) !important;
+	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
+}
+
+#bookmarks-button {
+	list-style-image: url(bookmarks.png) !important;
+	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
+}
+
+.cm-button .toolbarbutton-icon {
+	margin: 0 -2px 2px 0 !important;
+}
+
+.cm-button > toolbarbutton[noarrow="true"] > .toolbarbutton-icon {
+	margin: 0 1px 2px 0 !important;
+}
+
+.cm-button .toolbarbutton-menu-dropmarker {
+	-moz-margin-start: 3px !important;
+	list-style-image: url(cm-button-dropmarker.png) !important;
+}
+
+#toolbar-menubar:not([temp-visible="true"])[_collapsed="true"] + #nav-bar {
+	padding-top: 3px !important;
+}
+
+
+/* Chrome style undoClose button for Tab Mix Plus */
+#navigator-toolbox #nav-bar #btn_undoclose {
+	-moz-appearance: none !important;
+}
+#navigator-toolbox #nav-bar #btn_undoclose toolbarbutton {
+	-moz-appearance: none !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 0 0 2px !important;
+	width: 30px !important;
+	height:24px !important;
+	list-style-image: url(undo-close-tab.png) !important;
+	-moz-image-region: rect(0px 24px 24px 0px) !important;
+	background-position: center left !important;
+}
+#navigator-toolbox #nav-bar #btn_undoclose toolbarbutton:hover {
+	list-style-image: url(undo-close-tab-h.png) !important;
+}
+#btn_undoclose[disabled=true] { opacity: 0.5; }
+
+/* incognito theme */
+
+window#main-window[browsingmode="private"]
+.frame-title-box {
+	background-color: #8390A8; /* #838FA4 #52698C */
+}
+window#main-window[browsingmode="private"][active="true"] 
+.frame-title-box { background-color: #526B8E; }
+
+window#main-window[browsingmode="private"] #chromeTitle.title-text {margin-left: 60px;}
+
+window#main-window[browsingmode="private"]
+resizer.frame-resizer { background-color: #8390A8 !important; }
+window#main-window[browsingmode="private"][active="true"] 
+resizer.frame-resizer { background-color: #526B8E !important; }
+window#main-window[browsingmode="private"]
+resizer.frame-resizer[dir="top"] { background-color: #7489A8 !important; }
+
+.private-browsing-mode {
+	display: none !important;
+	width: 40px !important;
+	background-image: none !important;
+}
+
+window#main-window[browsingmode="private"] #private-browsing-icon {
+	position: fixed;
+	top: 10px;
+	left: 8px;
+	z-index: 10;
+	width: 38px;
+	height: 31px;
+	background-image: url(private-browsing.png);
+}
+
+window#main-window[browsingmode="private"] .tabbrowser-strip { left:52px !important; }
+
+/* incognito tabs */
+window#main-window[browsingmode="private"] .tabbrowser-tab .tab-center-img {
+	list-style-image: url(priv-tab-image-middle.png);
+	background: transparent url(priv-tab-image-middle.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab .tab-left-img {
+	list-style-image: url(priv-tab-image-left.png);
+	background: transparent url(priv-tab-image-left.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab .tab-right-img {
+	list-style-image: url(priv-tab-image-right.png);
+	background: transparent url(priv-tab-image-right.png);
+}
+
+window#main-window[browsingmode="private"] .tab-close-button { 
+	background-image: url(priv-tab-image-middle.png) !important;
+}
+
+/* selected */
+window#main-window[browsingmode="private"] .tabbrowser-tab[selected="true"] .tab-center-img {
+	list-style-image: url(selected-tab-image-middle.png);
+	background: transparent url(selected-tab-image-middle.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab[selected="true"] .tab-left-img {
+	list-style-image: url(selected-tab-image-left.png);
+	background: transparent url(selected-tab-image-left.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab[selected="true"] .tab-right-img {
+	list-style-image: url(selected-tab-image-right.png);
+	background: transparent url(selected-tab-image-right.png);
+}
+
+window#main-window[browsingmode="private"] .tabbrowser-tab[selected="true"] .tab-close-button {
+	background-image: url(selected-tab-image-middle.png) !important;
+}
+
+/* after select */
+window#main-window[browsingmode="private"] .tabbrowser-tab[afterselected="true"] .tab-left-img {
+	list-style-image: url(selected-tab-image-right-priv-tab-image-left.png);
+	background: transparent url(selected-tab-image-right-priv-tab-image-left.png);
+}
+
+/* left cover right */
+window#main-window[browsingmode="private"] 
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]) .tab-left-img {
+	list-style-image: url(priv-tab-image-right-priv-tab-image-left.png);
+	background: transparent url(priv-tab-image-right-priv-tab-image-left.png);
+}
+
+/* hover */
+window#main-window[browsingmode="private"] .tabbrowser-tab:not([selected="true"]):hover .tab-center-img {
+	list-style-image: url(priv-hover-tab-image-middle.png);
+	background: transparent url(priv-hover-tab-image-middle.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab:not([selected="true"]):hover .tab-left-img {
+	list-style-image: url(priv-hover-tab-image-left.png);
+	background: transparent url(priv-hover-tab-image-left.png);
+}
+window#main-window[browsingmode="private"] .tabbrowser-tab:not([selected="true"]):hover .tab-right-img {
+	list-style-image: url(priv-hover-tab-image-right.png);
+	background: transparent url(priv-hover-tab-image-right.png);
+}
+
+window#main-window[browsingmode="private"] .tabbrowser-tab:not([selected="true"]):hover .tab-close-button { 
+	background-image: url(priv-hover-tab-image-middle.png) !important;
+}
+
+/* after select */
+window#main-window[browsingmode="private"] .tabbrowser-tab[afterselected="true"]:hover .tab-left-img {
+	list-style-image: url(selected-tab-image-right-priv-hover-tab-image-left.png);
+	background: transparent url(selected-tab-image-right-priv-hover-tab-image-left.png);
+}
+
+/* left cover right */
+window#main-window[browsingmode="private"]
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]):hover .tab-left-img {
+	list-style-image: url(priv-tab-image-right-priv-hover-tab-image-left.png);
+	background: transparent url(priv-tab-image-right-priv-hover-tab-image-left.png);
+}
+
+window#main-window[browsingmode="private"] .tabbrowser-tab:hover +
+.tabbrowser-tab:not([selected="true"]):not([first-tab]):not([afterselected]) .tab-left-img {
+	list-style-image: url(priv-hover-tab-image-right-priv-tab-image-left.png);
+	background: transparent url(priv-hover-tab-image-right-priv-tab-image-left.png);
+}
+
+
+/* maximized */
+
+window#main-window[chromestate="maximized"] #chrome-button-box .max-button {list-style-image: url(btn-restore.png);}
+window#main-window[chromestate="maximized"] #chrome-button-box .max-button:hover {list-style-image: url(btn-restore-h.png);}
+window#main-window[chromestate="maximized"] #chrome-button-box .max-button:active {list-style-image: url(btn-restore-a.png);}
+
+window#main-window[chromestate="maximized"] .frame-resizer,
+window#main-window[chromestate="maximized"] #status-bar .statusbar-resizerpanel,
+window#main-window[chromestate="maximized"] .frame-titlebar,
+window#main-window[chromestate="maximized"] .tab-dbclick-box {display:none;}
+
+window#main-window[chromestate="maximized"] .frame-title-box { height: 26px; }
+window#main-window[chromestate="maximized"]
+.tabbrowser-strip {top:0px !important; left:0px !important; margin-right:118px !important;}
+
+window#main-window[browsingmode="private"][chromestate="maximized"]
+.tabbrowser-strip {left:52px !important;}
+window#main-window[browsingmode="private"][chromestate="maximized"]
+#private-browsing-icon { top:0px; width:38px; height:26px; }
+
+window#main-window[chromestate="maximized"] .tab-drop-indicator-bar {top: 24px !important;}
+
+/* for compatibility */
+
+#speedDialLoaderBrowser { visibility: hidden; }
+
+#navigator-toolbox { padding-top:0 !important; }
