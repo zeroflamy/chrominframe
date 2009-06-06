@@ -1,0 +1,10 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#main-window { -moz-binding: url("chrome://ChrominFrame/content/Windows.xml#ChrominFrame"); }
+
+.tabbrowser-tab { -moz-binding: url("chrome://ChrominFrame/content/tab.xml#tabbrowser-tab") !important; }
+
+#main-window[firefox3] .tabbrowser-tab {
+ -moz-binding: url(chrome://ChrominFrame/content/tabmix_3.xml#browser-tab) !important;
+}
+
