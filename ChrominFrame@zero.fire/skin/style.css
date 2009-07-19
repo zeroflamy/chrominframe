@@ -381,7 +381,7 @@ tab {
 }
 
 /*New Tab Button on Tab Right*/
-.tabs-newtab-topbox {
+tabbrowser .tabbrowser-tabs .tabs-newtab-topbox {
 	-moz-box-align: end !important;
 	-moz-box-pack: end !important;
 	max-height:26px;
@@ -389,12 +389,14 @@ tab {
 	padding-top: 0px !important;
 }
 
+tabbrowser .tabbrowser-tabs .tabs-newtab-button,
 tabbrowser .tabbrowser-tabs[overflow] .tabs-newtab-button,
-tabbrowser .tabbrowser-tabs .tabs-newtab-button {
+tabbrowser .tabbrowser-tabs:not([overflow]) .tabs-newtab-button:last-child {
 	-moz-appearance: none !important;
 	-moz-box-orient: vertical !important;
 	min-width: 28px;
 	min-height:26px;
+	width: 28px !important;
 	height: 26px !important;
 	border: none !important;
 	margin: 0 0 0 -2px !important;
