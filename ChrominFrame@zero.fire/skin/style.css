@@ -247,7 +247,7 @@ tab {
 	border:0 !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	min-width: 150px;
+	min-width: 150px !important;
 	height: 26px !important;
 	min-height: 26px !important;
 	max-height: 26px !important;
@@ -593,12 +593,6 @@ resizer.frame-resizer { background-color: #526B8E !important; }
 window#main-window[browsingmode="private"]
 resizer.frame-resizer[dir="top"] { background-color: #7489A8 !important; }
 
-.private-browsing-mode {
-	display: none !important;
-	width: 40px !important;
-	background-image: none !important;
-}
-
 window#main-window[browsingmode="private"] #private-browsing-icon {
 	position: fixed;
 	top: 10px;
@@ -726,6 +720,8 @@ window#main-window[chromestate="maximized"] .tab-drop-indicator-bar {top: 24px !
 
 #speedDialLoaderBrowser { visibility: hidden; }
 
-#navigator-toolbox { padding-top:0 !important; }
+#navigator-toolbox { padding-top:0 !important; margin-top:0 !important}
 #toolbar-menubar[collapsed] + #nav-bar,
-#toolbar-menubar[collapsed] + #fullscr-toggler + #nav-bar{ margin-top:0; }
+#toolbar-menubar[collapsed] + #fullscr-toggler + #nav-bar{ margin-top:0 !important; }
+#private-browsing-mode, .private-browsing-mode
+{ display: none !important; }/* private icon of Chromifox Extreme 3 */
