@@ -4,7 +4,9 @@
 
 .tabbrowser-tab { -moz-binding: url("chrome://ChrominFrame/content/tab.xml#tabbrowser-tab") !important; }
 
-#main-window[firefox3] .tabbrowser-tab {
+#main-window[firefox3] .tabbrowser-tab,/*Tab mix plus for FF3*/
+tabs.tabbrowser-tabs[tabmix_firefox3] tab.tabbrowser-tab/*Tab mix plus for FF3.5*/
+{
  -moz-binding: url(chrome://ChrominFrame/content/tabmix_3.xml#browser-tab) !important;
 }
 
