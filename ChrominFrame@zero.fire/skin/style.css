@@ -720,7 +720,7 @@ window#main-window[chromestate="maximized"] .tab-drop-indicator-bar {top: 24px !
 
 #speedDialLoaderBrowser { visibility: hidden; }
 
-#navigator-toolbox { padding-top:0 !important; margin-top:0 !important}
+#main-window:not([dummy]) #navigator-toolbox { padding-top:0 !important; margin-top:0 !important}
 #toolbar-menubar[collapsed] + #nav-bar,
 #toolbar-menubar[collapsed] + #fullscr-toggler + #nav-bar{ margin-top:0 !important; }
 #private-browsing-mode, .private-browsing-mode
