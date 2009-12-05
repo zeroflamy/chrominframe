@@ -29,7 +29,7 @@
 								ondblclick="if(event.button==0){gChrominFrame.Maximize()};">
 							<xul:label crop="end" flex="1" id="chromeTitle" class="title-text"/>
 						</xul:titlebar>
-						<xul:hbox flex="1" class="tab-dbclick-box" ondblclick="if(event.button==0){BrowserOpenTab()};"/>
+						<xul:hbox flex="1" class="tab-dbclick-box" ondblclick="if(event.button==0){gChrominFrame.Maximize()};"/>
 						<xul:hbox id="private-browsing-icon"/>
 					</xul:vbox>
 					<xul:hbox id="chrome-button-box">
