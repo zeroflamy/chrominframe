@@ -367,7 +367,7 @@ tab {
 	padding:0px !important;
 	margin: 0px !important;
 	-moz-border-radius:0 !important;
-	background-position: 0 !important;
+	background-position: 0 0 !important;
 	background-image: url(tab-image-middle.png) !important;
 }
 
