@@ -227,9 +227,10 @@ tab {
 /* tab indicator */
 
 .tab-drop-indicator-bar {
+	margin:0 !important;
 	position: fixed!important;
-	top: 36px !important;
-	left: -1px !important;
+	top: 32px !important;
+	left: -8px !important;
 	width: 100%!important;
 	z-index: 1;
 }
@@ -711,7 +712,7 @@ window#main-window[browsingmode="private"][chromestate="maximized"]
 window#main-window[browsingmode="private"][chromestate="maximized"]
 #private-browsing-icon { top:0px; width:38px; height:26px; }
 
-window#main-window[chromestate="maximized"] .tab-drop-indicator-bar {top: 24px !important;}
+window#main-window[chromestate="maximized"] .tab-drop-indicator-bar {top: 16px !important;}
 
 /* for compatibility */
 
