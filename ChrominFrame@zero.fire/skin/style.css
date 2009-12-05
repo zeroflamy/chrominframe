@@ -6,22 +6,20 @@
 }
 window[active="true"] #chrome-title-box.frame-title-box { background-color: #4C91E5; }
 
-#chrome-title-box .frame-titlebar {
-	height: 17px;
-	margin-right:100px;
-}
+window#main-window:not([chromestate="maximized"]) #chrome-title-box .tab-dbclick-box {display:none;}
+
 /* title text*/
 
-#chromeTitle.title-text {
+#chromeTitle{
 	color: #fff;
-	margin: 0 0 0 16px;
+	margin: 0 100px 0 16px;
 	font: bold 12px/18px Helvetica, Arial, sans-serif;
 	opacity: 0.6;
+	visibility: hidden;
 }
 
-/* box for double click to add new tab */
-.tab-dbclick-box {
-	height: 26px;
+#chrome-title-box .frame-titlebar:hover #chromeTitle {
+	visibility: visible;
 }
 
 /* ui buttons */
@@ -585,7 +583,7 @@ window#main-window[browsingmode="private"]
 window#main-window[browsingmode="private"][active="true"] 
 #chrome-title-box.frame-title-box { background-color: #526B8E; }
 
-window#main-window[browsingmode="private"] #chromeTitle.title-text {margin-left: 60px;}
+window#main-window[browsingmode="private"] #chromeTitle {margin-left: 60px;}
 
 window#main-window[browsingmode="private"]
 resizer.frame-resizer { background-color: #8390A8 !important; }
@@ -703,9 +701,7 @@ window#main-window[chromestate="maximized"] .frame-resizer,
 window#main-window[chromestate="maximized"] #chrome-title-box .frame-titlebar {display:none;}
 
 window#main-window[chromestate="maximized"] #status-bar .statusbar-resizerpanel resizer{visibility:hidden;}
-/*
-window#main-window[chromestate="maximized"] #status-bar > statusbarpanel:nth-last-child(-n+1) {margin-right: -2px;}
-*/
+
 window#main-window[chromestate="maximized"] #chrome-title-box.frame-title-box { height: 28px; }
 window#main-window[chromestate="maximized"]
 #browser #content .tabbrowser-strip {top:0px !important; left:0px !important; margin-right:118px !important;}
