@@ -145,7 +145,7 @@ window#main-window[chromestate="maximized"] #chrome-content { border-width:1px 0
 #toolbar-menubar[collapsed] + #nav-bar,
 #toolbar-menubar[collapsed] + #fullscr-toggler + #nav-bar {
 	border-top: 0px !important;
-	-moz-border-radius: 2px 2px 0px 0px !important;
+	-moz-border-radius: 4px 4px 0px 0px !important;
 }
 #navigator-toolbox,#navigator-toolbox toolbar {-moz-appearance: none ;}
 
@@ -192,7 +192,7 @@ window#main-window[chromestate="maximized"] #chrome-content { border-width:1px 0
 #browser #content .tabbrowser-strip {
 	position:fixed !important;
 	top:16px !important;
-	left:4px !important;
+	left:6px !important;
 	border: 0 !important;
 	padding: 0 0px 0 0 !important;
 	margin: 0 32px 0 0 !important;
@@ -596,7 +596,7 @@ resizer.frame-resizer[dir="top"] { background-color: #7489A8 !important; }
 window#main-window[browsingmode="private"] #private-browsing-icon {
 	position: fixed;
 	top: 10px;
-	left: 8px;
+	left: 10px;
 	z-index: 10;
 	width: 38px;
 	height: 31px;
@@ -705,7 +705,7 @@ window#main-window[chromestate="maximized"] #status-bar .statusbar-resizerpanel 
 
 window#main-window[chromestate="maximized"] #chrome-title-box.frame-title-box { height: 28px; }
 window#main-window[chromestate="maximized"]
-#browser #content .tabbrowser-strip {top:0px !important; left:0px !important; margin-right:118px !important;}
+#browser #content .tabbrowser-strip {top:0px !important; left:2px !important; margin-right:118px !important;}
 
 window#main-window[browsingmode="private"][chromestate="maximized"]
 #browser #content .tabbrowser-strip {left:52px !important;}
