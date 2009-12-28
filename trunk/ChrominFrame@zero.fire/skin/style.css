@@ -550,11 +550,6 @@ tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled].scroll
 	list-style-image: url(cm-button-dropmarker.png) !important;
 }
 
-#toolbar-menubar:not([temp-visible="true"])[_collapsed="true"] + #nav-bar {
-	padding-top: 3px !important;
-}
-
-
 /* Chrome style undoClose button for Tab Mix Plus */
 #navigator-toolbox #nav-bar #btn_undoclose {
 	-moz-appearance: none !important;
