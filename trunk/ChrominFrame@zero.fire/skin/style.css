@@ -253,13 +253,15 @@ tab {
 	-moz-border-radius: 0 !important;
 }
 
-.tabbrowser-tab,
-.tabbrowser-tab[selected="true"],
-.tabbrowser-tab:hover,
-.tabbrowser-tab:not([selected="true"]):hover {
+.tabbrowser-tab:not([dummy]),
+.tabbrowser-tab:not([dummy]):hover,
+.tabbrowser-tab:not([dummy]) + .tabbrowser-tab:not([dummy]),
+.tabbrowser-tab:not([dummy]):hover + .tabbrowser-tab:not([dummy]),
+.tabbrowser-tab:not([dummy]) + .tabbrowser-tab:not([dummy]):hover{
 	margin-left: 15px !important;
 	margin-right: -15px !important;
 	background: transparent none !important;
+	-moz-border-image: none !important; 
 }
 
 /* first tab */
@@ -372,7 +374,7 @@ tab {
 	background-image: url(tab-image-middle.png) !important;
 }
 
-.tabbrowser-tab:hover .tab-close-button {
+.tabbrowser-tab:not([selected]):hover .tab-close-button {
 	background-image: url(hover-tab-image-middle.png) !important;
 }
 
@@ -482,10 +484,10 @@ tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-dow
 }
 
 tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-up {
-	list-style-image: url(menu-back.png);
+	list-style-image: url(menu-back.png) !important;
 }
 tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton.scrollbutton-down{
-	list-style-image: url(menu-forward.png);
+	list-style-image: url(menu-forward.png) !important;
 }
 
 tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton { opacity: 0.8; }
