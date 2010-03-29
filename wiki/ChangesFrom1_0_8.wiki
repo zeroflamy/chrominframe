@@ -45,3 +45,10 @@ Version 1.0.9.x support current release of Firefox (Version 3.5.x). With some fi
  * fix bugs
  * support dual monitor when maximize
  * make sure window is in screen after loadup or maximized/restored
+
+= 1.0.9.7 =
+
+ * support ffx3.6
+ * does not hide tab bar when fullscreen
+ * minor style fix
+ * fix compatibility for latest Chromifox Basic
