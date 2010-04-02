@@ -626,7 +626,7 @@ window#main-window[chromestate="maximized"] #chrome-button-box .max-button:activ
 window#main-window[chromestate="maximized"] .frame-resizer,
 window#main-window[chromestate="maximized"] #chrome-title-box .frame-titlebar {display:none;}
 
-window#main-window[chromestate="maximized"] #status-bar .statusbar-resizerpanel resizer{visibility:hidden;}
+window#main-window[chromestate="maximized"] #status-bar .statusbar-resizerpanel{display:none!important;}
 
 window#main-window[chromestate="maximized"] #chrome-title-box.frame-title-box { height: 28px; }
 window#main-window[chromestate="maximized"]
