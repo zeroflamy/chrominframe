@@ -25,8 +25,8 @@ window#main-window:not([chromestate="maximized"]) #chrome-title-box .tab-dbclick
 /* ui buttons */
 #chrome-button-box {
 	position: fixed;
-	top: 1px;
-	right: 4px;
+	top: 0px;
+	right: 0px;
 }
 
 #chrome-button-box .frame-button {
@@ -37,7 +37,7 @@ window#main-window:not([chromestate="maximized"]) #chrome-title-box .tab-dbclick
 	min-width: 25px;
 	min-height: 18px;
 	border: none;
-	padding: 0px;
+	padding: 1px 0 0 0;
 	margin: 0px;
 	z-index: 500;
 }
@@ -50,7 +50,7 @@ window#main-window:not([chromestate="maximized"]) #chrome-title-box .tab-dbclick
 #chrome-button-box .max-button:hover { list-style-image: url(btn-max-h.png); }
 #chrome-button-box .max-button:active { list-style-image: url(btn-max-a.png); }
 
-#chrome-button-box .close-button { width: 43px; list-style-image: url(btn-close.png); }
+#chrome-button-box .close-button { width: 47px; list-style-image: url(btn-close.png); }
 #chrome-button-box .close-button:hover { list-style-image: url(btn-close-h.png); }
 #chrome-button-box .close-button:active { list-style-image: url(btn-close-a.png); }
 
@@ -618,6 +618,7 @@ window#main-window[browsingmode="private"] .tabbrowser-tab:hover +
 
 /* maximized */
 
+window#main-window[chromestate="maximized"] #chrome-button-box .frame-button {padding:0}
 window#main-window[chromestate="maximized"] #chrome-button-box .max-button {list-style-image: url(btn-restore.png);}
 window#main-window[chromestate="maximized"] #chrome-button-box .max-button:hover {list-style-image: url(btn-restore-h.png);}
 window#main-window[chromestate="maximized"] #chrome-button-box .max-button:active {list-style-image: url(btn-restore-a.png);}
