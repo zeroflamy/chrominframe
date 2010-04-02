@@ -270,8 +270,9 @@ tab {
 	padding-left: 15px !important;
 }
 /* last tab */
-.tabbrowser-tab[last-tab="true"],
-.tabbrowser-tab[last-tab="true"]:hover {
+.tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-tab="true"],
+.tabbrowser-tabs:not([overflow]):hover .tabbrowser-tab[last-tab="true"],
+.tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-tab="true"]:hover {
 	margin-right: 0px !important;
 }
 
@@ -497,80 +498,6 @@ tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled],
 tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled]:hover{opacity: 0.3;}
 tabs.tabbrowser-tabs .tabbrowser-arrowscrollbox > toolbarbutton[disabled].scrollbutton-up{visibility:collapse;}
 
-/* PersonalMenu */
-
-.cm-button > toolbarbutton {
-	width: 40px !important;
-}
-
-.cm-button > toolbarbutton[noarrow="true"] {
-	width: 33px !important;
-}
-
-.cm-button > toolbarbutton:hover {
-	background: transparent url(bgbutton-h.png) no-repeat !important;
-	background-position: center left !important;
-}
-
-.cm-button > toolbarbutton[noarrow="true"]:hover {
-	background-image: url(bgbutton-na-h.png) !important;
-}
-
-.cm-button > toolbarbutton:hover:active {
-	background-image: url(bgbutton-a.png) !important;
-}
-
-.cm-button > toolbarbutton[noarrow="true"]:hover:active {
-	background-image: url(bgbutton-na-a.png) !important;
-}
-
-#cm-menu {
-	list-style-image: url(cm.png) !important;
-	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
-}
-
-#history-button {
-	list-style-image: url(history.png) !important;
-	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
-}
-
-#bookmarks-button {
-	list-style-image: url(bookmarks.png) !important;
-	-moz-image-region: rect(0px, 17px, 0px, 17px) !important;
-}
-
-.cm-button .toolbarbutton-icon {
-	margin: 0 -2px 2px 0 !important;
-}
-
-.cm-button > toolbarbutton[noarrow="true"] > .toolbarbutton-icon {
-	margin: 0 1px 2px 0 !important;
-}
-
-.cm-button .toolbarbutton-menu-dropmarker {
-	-moz-margin-start: 3px !important;
-	list-style-image: url(cm-button-dropmarker.png) !important;
-}
-
-/* Chrome style undoClose button for Tab Mix Plus */
-#navigator-toolbox #nav-bar #btn_undoclose {
-	-moz-appearance: none !important;
-}
-#navigator-toolbox #nav-bar #btn_undoclose toolbarbutton {
-	-moz-appearance: none !important;
-	border: none !important;
-	margin: 0 !important;
-	padding: 0 0 0 2px !important;
-	width: 30px !important;
-	height:24px !important;
-	list-style-image: url(undo-close-tab.png) !important;
-	-moz-image-region: rect(0px 24px 24px 0px) !important;
-	background-position: center left !important;
-}
-#navigator-toolbox #nav-bar #btn_undoclose toolbarbutton:hover {
-	list-style-image: url(undo-close-tab-h.png) !important;
-}
-#btn_undoclose[disabled=true] { opacity: 0.5; }
 
 /* incognito theme */
 
