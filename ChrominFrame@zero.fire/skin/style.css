@@ -270,9 +270,10 @@ tab {
 	padding-left: 15px !important;
 }
 /* last tab */
-.tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-tab="true"],
-.tabbrowser-tabs:not([overflow]):hover .tabbrowser-tab[last-tab="true"],
-.tabbrowser-tabs:not([overflow]) .tabbrowser-tab[last-tab="true"]:hover {
+.tabbrowser-tab[last-tab="true"],
+.tabbrowser-tab[last-tab="true"]:hover,
+.tabbrowser-tab:not([dummy]) + .tabbrowser-tab[last-tab="true"],
+.tabbrowser-tab:not([dummy]) + .tabbrowser-tab[last-tab="true"]:hover{
 	margin-right: 0px !important;
 }
 
