@@ -273,7 +273,8 @@ tab {
 .tabbrowser-tab[last-tab="true"],
 .tabbrowser-tab[last-tab="true"]:hover,
 .tabbrowser-tab:not([dummy]) + .tabbrowser-tab[last-tab="true"],
-.tabbrowser-tab:not([dummy]) + .tabbrowser-tab[last-tab="true"]:hover{
+.tabbrowser-tab:not([dummy]) + .tabbrowser-tab[last-tab="true"]:hover,
+.tabbrowser-tab:not([dummy]):hover + .tabbrowser-tab[last-tab="true"] {
 	margin-right: 0px !important;
 }
 
