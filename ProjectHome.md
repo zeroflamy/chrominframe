@@ -1,0 +1,1 @@
+Chromin Frame places the tab bar at the top of window, and replace the title bar and window frame bringing it closer to the Chrome look.
